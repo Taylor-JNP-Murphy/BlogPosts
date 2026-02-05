@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+</head>
+<style>
+    body {
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    .blog-post {
+        width: 500px;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        background-color: #333333e2;
+        color: white;
+        border-radius: 15px;
+        padding: 16px;
+        margin-top: 1em;
+        box-shadow: 1px 1px 10px black;
+        > .blog-title {
+            font-weight: bold;
+        }
+        > .date {
+            font-style: italic;
+            font-size: 10px;
+            color: rgba(222, 222, 222, 0.901);
+        }
+    }
+</style>
+<body>
+    <% posts.forEach(post=> { %> 
+        <article class="blog-post">
+            <h2 class="blog-title">
+                <%= post.blog_title %>
+            </h2>
+            <div class="content">
+                <%= post.blog_content %>
+            </div>
+            <p class="date">
+                <%= new Date(post.date).toLocaleDateString() %>
+            </p>
+        </article>
+        <% }) %>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Post</title>
+</head>
+<style>
+    body {
+        display: flex;
+    }
+    form {
+        display: flex;
+        flex-direction: column;
+        width: 500px;
+        margin: auto;
+        vertical-align: middle;
+    }
+    form input {
+        margin: 16px;
+    }
+</style>
+<body>
+    <div>
+
+    </div>
+
+    <form action="/submit" method="post">
+        <label for="blog_title">Blog Title</label>
+        <input type="text" name="blog_title" id="blog_title">
+
+        <label for="blog_content">Blog Content:</label>
+        <textarea name="blog_content" id="blog_content"></textarea>
+
+        <label for="date">Date</label>
+        <input type="date" name="date" id="date">
+
+        <input type="submit" value="Submit">
+    </form>
+</body>
+
+</html>
